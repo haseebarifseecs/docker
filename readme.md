@@ -6,4 +6,4 @@
 - Once logged in tag the image using your dockerhub repo username and image name.
 - Push using docker push **repo/image:tag**.
 - Dockerhub Repo URL: https://hub.docker.com/repository/docker/zeusequinox/angular-sample-app 
-
+- Execute Docker Container using "docker exec -it \<container name\> \<command to execute\>"
