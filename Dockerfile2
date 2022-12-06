@@ -1,4 +1,4 @@
-FROM node:19.2-alpine
+FROM node:19.2-alpine as build
 WORKDIR /opt/html
 ARG NODE_OPTIONS
 ENV NODE_OPTIONS ${NODE_OPTIONS}
@@ -6,4 +6,10 @@ COPY package.json package-lock.json /opt/html/
 RUN npm install --peer-legacy-deps
 COPY . /opt/html/
 RUN npm run build 
+
+
+FROM nginx:alpine
+WORKDIR /usr/share/nginx/html
+COPY --from=build /opt/html/dist ./
+
 
