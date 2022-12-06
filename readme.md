@@ -1,4 +1,4 @@
-# Docker File for Sample Angular Map
+# Docker File for Sample Angular App
 
 - Build Using "docker build . -t zeusequinox/angular-sample-app --build-arg NODE_OPTIONS=--openssl-legacy-provider"
 - Tag Image "docker tag zeusequinox/angular-sample-app zeusequinox/angular-sample-app:1.0"
